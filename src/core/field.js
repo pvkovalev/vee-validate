@@ -410,7 +410,8 @@ export default class Field {
       return;
     }
 
-    const els = document.querySelectorAll(`input[name="${this.el.name}"]`);
+    //const els = document.querySelectorAll(`input[name="${this.el.name}"]`);
+    const els = document.getElementsByName(`"${this.el.name}"`);
     toArray(els).forEach(applyClasses);
   }
 
@@ -637,7 +638,8 @@ export default class Field {
       return;
     }
 
-    const els = document.querySelectorAll(`input[name="${this.el.name}"]`);
+    //const els = document.querySelectorAll(`input[name="${this.el.name}"]`);
+    const els = document.getElementsByName(`"${this.el.name}"`);
     toArray(els).forEach(el => {
       // skip if it is added by v-validate and is not the current element.
       if (el._veeValidateId && el !== this.el) {
@@ -664,7 +666,8 @@ export default class Field {
       return;
     }
 
-    const els = document.querySelectorAll(`input[name="${this.el.name}"]`);
+    //const els = document.querySelectorAll(`input[name="${this.el.name}"]`);
+    const els = document.getElementsByName(`"${this.el.name}"`);
     toArray(els).forEach(applyAriaAttrs);
   }
 
